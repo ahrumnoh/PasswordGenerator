@@ -7,6 +7,8 @@ const form = document.getElementById('GeneratorForm')
 const passwordDisplay = document.getElementById('passwordDisplay')
 
 
+
+
 const UPPERCASE_CHAR_CODES = arrayFromLowToHigh(65, 90)
 const LOWERCASE_CHAR_CODES = arrayFromLowToHigh(97, 122)
 const NUMBERS_CHAR_CODES = arrayFromLowToHigh(48, 57)
@@ -21,11 +23,15 @@ const SYMBOLS_CHAR_CODES = arrayFromLowToHigh(33, 47).concat(
 
 
 
+
+
 characterAmountNumber.addEventListener('input', syncCharacterAmount)
 characterAmountRange.addEventListener('input', syncCharacterAmount)
 
 
-.form.addEventListener('submit', e => {
+
+
+form.addEventListener('submit', e => {
     e.preventDefault()
     const characterAmount = characterAmountNumber.value
     const Uppercase = UppercaseElement.checked
@@ -35,6 +41,8 @@ characterAmountRange.addEventListener('input', syncCharacterAmount)
     passwordDisplay.innerText = password
 })
 
+
+
 function generatePassword(characterAmount,Uppercase,Numbers,Symbols) {
     let charCodes = LOWERCASE_CHAR_CODES
     if (Uppercase) charCodes = CharCodes.concat(UPPERCASE_CHAR_CODES)
@@ -43,15 +51,14 @@ function generatePassword(characterAmount,Uppercase,Numbers,Symbols) {
     
     
     const passwordCharacters = []
-    for(let i = 0; i < characterAmount; i++) {
-        const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
-        passwordCharacters.push(string.fromCharCode(characterCode))
+    for (let i = 0; i < characterAmount; i++) {
+        const characterCode = charCodes[ Math.floor(Math.random() * charCodes.length)] //// <--- suspicious sentence!
+        passwordCharacters.push(String.fromCharCode(characterCode))
     }
-    return passwordCharacters.join('')
-
-
-  
+    return passwordCharacters.join('')  
 }
+
+
 
 function arrayFromLowToHigh(low,high) {
     const array = []
@@ -63,7 +70,7 @@ function arrayFromLowToHigh(low,high) {
 
 function syncCharacterAmount(e) {
     const value = e.target.value
-    characternumber.value = value
-    characterRange.value = value
+    characterAmountNumber.value = value
+    characterAmountRange.value = value
 }
 
