@@ -44,12 +44,13 @@ form.addEventListener('submit', e => {
 
 
 function generatePassword(characterAmount,Uppercase,Numbers,Symbols) {
+    console.log(UPPERCASE_CHAR_CODES)
     let charCodes = LOWERCASE_CHAR_CODES
-    if (Uppercase) charCodes = CharCodes.concat(UPPERCASE_CHAR_CODES)
-    if (Symbols) charCodes = CharCodes.concat(SYMBOLS_CHAR_CODES)
-    if (Numbers) charCodes = CharCodes.concat(NUMBERS_CHAR_CODES)
+    if (Uppercase) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
+    if (Symbols) charCodes = charCodes.concat(SYMBOLS_CHAR_CODES)
+    if (Numbers) charCodes = charCodes.concat(NUMBERS_CHAR_CODES)
     
-    
+    console.log(charCodes)
     const passwordCharacters = []
     for (let i = 0; i < characterAmount; i++) {
         const characterCode = charCodes[ Math.floor(Math.random() * charCodes.length)] 
