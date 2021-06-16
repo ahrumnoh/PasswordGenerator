@@ -52,7 +52,7 @@ function generatePassword(characterAmount,Uppercase,Numbers,Symbols) {
     
     const passwordCharacters = []
     for (let i = 0; i < characterAmount; i++) {
-        const characterCode = charCodes[ Math.floor(Math.random() * charCodes.length)] //// <--- suspicious sentence!
+        const characterCode = charCodes[ Math.floor(Math.random() * charCodes.length)] 
         passwordCharacters.push(String.fromCharCode(characterCode))
     }
     return passwordCharacters.join('')  
