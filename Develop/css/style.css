@@ -1,7 +1,8 @@
 body{
   background-color: burlywood;
   margin:0;
-  color:cadetblue;
+  color:darkolivegreen;
+  font-style: bold;
   min-height: 100vh;
   display:flex;
   justify-content: center;
@@ -10,7 +11,7 @@ body{
 }
 
 .container {
-  background-color: coral;
+  background-color:lightsalmon;
   padding:3rem;
   border-radius: 1rem;
   border: 2px solid red;
@@ -47,7 +48,7 @@ body{
 }
 
 .password-display {
-  background-color:blue;
+  background-color:navajowhite;
   color:black;
   padding:1rem;
   border: 1px solid #333;
@@ -74,5 +75,5 @@ body{
 
 
 .btn:hover {
-  background-color: tomato;
+  background-color: lightslategrey;
 }
