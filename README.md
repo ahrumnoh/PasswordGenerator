@@ -1,4 +1,3 @@
-# intro-Ahrum Noh
 ![image!](https://github.com/ahrumnoh/PasswordGenerator/blob/main/Develop/image/lo.jpg?raw=true)
 
 
